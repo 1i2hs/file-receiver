@@ -64,12 +64,11 @@ app.listen(PORT, () => logger.info(`${APP_NAME} listening at port ${PORT}`));
 
 
 const mediaRouter = express.Router();
-mediaRouter.post("/video", upload.single("lecture-video"), (req, res) => {
+mediaRouter.post("/video", upload.single("jyouth-video"), (req, res) => {
   const file = req.file;
-  logger.info(`file: ${file.originalname} is being uploaded`);
-  logger.info(`file info: ${file}`);
+  logger.info(`file: ${file.originalname} is being uploaded...`);
 
-  res.send("OK");
+  res.sendStatus(200);
 })
 
 app.use("/upload", mediaRouter);
