@@ -29,20 +29,20 @@ Configuration can be changed by modifying ecosystem.config.js file. The file is 
 ```javascript
 module.exports = {
   apps : [{
-    name: "media-receiver", // name of the application
+    name: "file-receiver", // name of the application
     script: "./app.js", // main node.js file to run
     watch: false, // enable watch & restart feature, if a file change in the folder or subfolder, your app will get reloaded 
     env: { // node environemnt value that can be read by process.env for development environment
       NODE_ENV: "development",
       PORT: 3000, // port number to open(process.env.PORT)
-      APP_NAME: "media-receiver", // name of the application(process.env.APP_NAME)
+      APP_NAME: "file-receiver", // name of the application(process.env.APP_NAME)
       VIDEO_FILE_NAME_PREFIX: "", // when a video file is received from the client, it will be named with this value.
       FILE_UPLOAD_DESTINATION: "uploaded"
     },
     env_production: { // production environment
       NODE_ENV: "production",
       PORT: 3000,
-      APP_NAME: "media-receiver",
+      APP_NAME: "file-receiver",
       VIDEO_FILE_NAME_PREFIX: "",
       FILE_UPLOAD_DESTINATION: "uploaded"
     }
