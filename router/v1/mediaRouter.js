@@ -18,10 +18,10 @@ function init(logger) {
 
   const upload = multer({ storage: storage });
 
-  const VIDEO_FILE_PREFIX = process.env.VIDEO_FILE_PREFIX || "video";
+  const VIDEO_FILE_NAME_PREFIX = process.env.VIDEO_FILE_NAME_PREFIX || "video";
 
   const mediaRouter = express.Router();
-  mediaRouter.post("/video", upload.single(VIDEO_FILE_PREFIX), (req, res) => {
+  mediaRouter.post("/video", upload.single(VIDEO_FILE_NAME_PREFIX), (req, res) => {
     const { file } = req;
     logger.info(
       `file: ${file.originalname} received successfully in the path: ${
