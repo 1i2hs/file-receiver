@@ -122,5 +122,6 @@ typings/
 
 # other local dirs
 media
+sample.html
 
 # End of https://www.gitignore.io/api/node,macos
