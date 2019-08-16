@@ -1,5 +1,5 @@
-# media-receiver
-A simple node.js application that receives media file uploads from client side. It uses [`multer`](https://github.com/expressjs/multer) to recevie files. Also it is recommended to run this application with [`PM2`](http://pm2.keymetrics.io/)
+# file-receiver
+A simple node.js application that receives file uploads from client side. It uses [`multer`](https://github.com/expressjs/multer) to recevie files. Also it is recommended to run this application with [`PM2`](http://pm2.keymetrics.io/)
 
 ## Compatible Node.js version
 \>= 10.14.0(LTS)
@@ -10,7 +10,7 @@ A simple node.js application that receives media file uploads from client side. 
 ```
 $ npm install
 ```
-3. make a directory named `media` in the root directory.
+3. make a directory named `uploaded`(default directory where uploaded files are saved) in the root directory.
 4. (Optional) Fill in `ecosystem.config.js` file which stays in a root directory. The detail about the file is written in later of this section.
 
 ## Run the application
@@ -36,13 +36,15 @@ module.exports = {
       NODE_ENV: "development",
       PORT: 3000, // port number to open(process.env.PORT)
       APP_NAME: "media-receiver", // name of the application(process.env.APP_NAME)
-      VIDEO_FILE_NAME_PREFIX: "" // when a video file is received from the client, it will be named with this value.
+      VIDEO_FILE_NAME_PREFIX: "", // when a video file is received from the client, it will be named with this value.
+      FILE_UPLOAD_DESTINATION: "uploaded"
     },
     env_production: { // production environment
       NODE_ENV: "production",
       PORT: 3000,
       APP_NAME: "media-receiver",
-      VIDEO_FILE_NAME_PREFIX: ""
+      VIDEO_FILE_NAME_PREFIX: "",
+      FILE_UPLOAD_DESTINATION: "uploaded"
     }
   }]
 }

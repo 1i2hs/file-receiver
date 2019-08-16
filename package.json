@@ -1,5 +1,5 @@
 {
-  "name": "media-receiver",
+  "name": "file-receiver",
   "version": "0.0.1",
   "description": "",
   "main": "app.js",
@@ -9,7 +9,7 @@
   "keywords": [
     "node",
     "express",
-    "media"
+    "file upload"
   ],
   "author": "Inho Han",
   "license": "MIT",
