@@ -1,5 +1,5 @@
 # media-receiver
-A simple node.js application that receives media file uploads from client side. It uses [`multer`]("https://github.com/expressjs/multer") to recevie files. Also it is recommended to run this application with [`PM2`]("http://pm2.keymetrics.io/")
+A simple node.js application that receives media file uploads from client side. It uses [`multer`](https://github.com/expressjs/multer) to recevie files. Also it is recommended to run this application with [`PM2`](http://pm2.keymetrics.io/)
 
 ## Compatible Node.js version
 \>= 10.14.0(LTS)
@@ -22,10 +22,10 @@ For production environment:
 ```
 pm2 start ecosystem.config.js --env production
 ```
-For more details about managing the application with PM2, please refer to [here](("http://pm2.keymetrics.io/"))
+For more details about managing the application with PM2, please refer to [here](http://pm2.keymetrics.io/)
 
 ## Configuration
-Configuration can be changed by modifying ecosystem.config.js file. The file is PM2's configuration file. You can check details about it in [here]("http://pm2.keymetrics.io/docs/usage/application-declaration/"). The default template for the file is:
+Configuration can be changed by modifying ecosystem.config.js file. The file is PM2's configuration file. You can check details about it in [here](http://pm2.keymetrics.io/docs/usage/application-declaration/). The default template for the file is:
 ```javascript
 module.exports = {
   apps : [{
